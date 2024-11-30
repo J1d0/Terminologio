@@ -1,0 +1,235 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* En-tête et titres */
+h1, h2 {
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Liens */
+a, .nav-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover, .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Boutons */
+button, .nav-button, .logout-btn, .create-illustration-btn, .change-comp, .add-trad, .login-btn, .sign-in-btn{
+    background-color: #28a745; /* Couleur unifiée pour tous les boutons */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none; /* En cas d'utilisation de <a> comme bouton */
+}
+
+button:hover, .nav-button:hover, .logout-btn, .create-illustration-btn, .change-comp, .add-trad, .login-btn, .sign-in-btn {
+    background-color: #218838;
+}
+
+/* Barre de navigation en haut */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Formulaires */
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#composants p {
+    margin-left: 5px;
+}
+
+/* Conteneur pour les titres des composants */
+#components-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#components-title p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styles pour la mise en forme des images dans les listes */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    button, .nav-button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    li img {
+        max-width: 70%;
+    }
+}
+
+/* Stylisation spécifique des pages */
+#image-container {
+    width: 35%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+img#illustration {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.point {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    line-height: 12px;
+    font-size: 8px;
+    color: white;
+    background: red;
+    cursor: pointer;
+    user-select: none;
+    transform: translate(-50%, -50%);
+}
+
+/* Stylisation du lien 'Accueil' */
+.accueil-link {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    margin: 0px 10px 10px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.accueil-link:hover {
+    background-color: #218838;
+}
+
+/* Stylisation du titre de chaque illustration */
+.illustration-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Stylisation du bouton 'Enregistrer' */
+#save-button {
+    padding: 10px 15px; /* Ajuster le remplissage si nécessaire */
+    
+}
+
+#delete-mode-button {
+    margin-right: 20px; /* Espace entre les boutons */
+    padding: 10px 15px;
+}
+
+
+/* Stylisation pour btn suppr et save design_comp.blade*/
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Pour aligner un bouton à gauche et l'autre à droite */
+    align-items: center; /* Pour aligner les boutons verticalement au centre */
+    width: 100%; /* Assurez-vous que le conteneur s'étend sur toute la largeur */
+}
+
+.logout-btn {
+    position: absolute; /* Positionnement absolu */
+    right: 10px; /* À droite de la page */
+    top: 10px; /* Un peu en dessous du haut de la page */
+}
+
+/* Stylisation du conteneur central dans show.blade */
+.centered-container {
+    text-align: center; /* Centrer le texte et le contenu inline */
+    display: flex;
+    flex-direction: column; /* Organiser les éléments en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments verticalement */
+    width: 100%; /* Utiliser toute la largeur disponible */
+    margin: auto; /* Centrer le conteneur lui-même */
+}
+
+/* Stylisation spécifique pour les sections à l'intérieur du conteneur central */
+#composants, #langues {
+    margin-bottom: 20px; /* Espacement entre les sections */
+}
+
+.nav-auth-buttons {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.login-btn {
+    left: 10px; /* Positionnement à gauche */
+}
+
+.sign-in-btn {
+    right: 10px; /* Positionnement à droite */
+}
